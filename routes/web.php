@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\HistoriesController;
 use App\Http\Controllers\Admin\TiketController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -28,6 +29,10 @@ Route::middleware('auth')->group(function () {
 
         // Tiket Management 
         Route::resource('tickets', TiketController::class);
+
+        // Histories
+        Route::get('/histories', [HistoriesController::class, 'index'])->name('histories.index');
+        Route::get('/histories/{id}', [HistoriesController::class, 'show'])->name('histories.show');
     });
 });
 
