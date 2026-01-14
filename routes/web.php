@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\TiketController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -24,6 +25,9 @@ Route::middleware('auth')->group(function () {
 
         // Event Management
         Route::resource('events', EventController::class);
+
+        // Tiket Management 
+        Route::resource('tickets', TiketController::class);
     });
 });
 
