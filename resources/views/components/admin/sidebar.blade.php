@@ -34,6 +34,18 @@
                 </a>
             </li>
 
+            <!-- Lokasi item -->
+            <li class="{{ request()->routeIs('admin.lokasis.*') ? 'bg-gray-200 rounded-lg' : '' }}">
+                <a href="{{ route('admin.lokasis.index') }}"
+                    class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Lokasi">
+                    <!-- icon Lokasi -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 5.69L17 10.19V18h-3v-4h-4v4H7v-7.81zM12 3L2 12h3v8h6v-4h2v4h6v-8h3z"/>
+                    </svg>
+                    <span class="is-drawer-close:hidden">Manajemen Lokasi</span>
+                </a>
+            </li>
+
             <!-- Event item -->
             <li class="{{ request()->routeIs('admin.events.*') ? 'bg-gray-200 rounded-lg' : '' }}">
                 <a href="{{ route('admin.events.index') }}"
